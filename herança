@@ -1,0 +1,117 @@
+package com.mycompany.aula5;
+
+public class Programa01 {
+
+    
+    public static void main(String[] args) {
+
+        Pessoa p1 = new Pessoa("ana", 1990,"ana@mail.com");
+        System.out.println(p1.getNome());
+        
+        Aluno a1 = new Aluno("caio", 1985, "caio@mail.com", "123");
+        System.out.println(a1.getNome());
+        
+        Professor b1 = new Professor ("girafales", 1945, "girafales@mail.com", "321");
+        System.out.println(b1.getMatricula());
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+package com.mycompany.aula5;
+
+public class Pessoa 
+{
+    private String nome;
+        private int anoNascimento;
+        private String email;
+        
+        public Pessoa(String nome, int anoNascimento, String email)
+        {
+            this.nome = nome;
+            this.anoNascimento = anoNascimento;
+            this.email = email;
+        }
+        
+        public String getNome()
+        {
+            return nome;
+        }
+        
+        public void setNome(String nome)
+        {
+            this.nome = nome;
+        }
+        
+        public int getanoNascimento()
+        {
+            return anoNascimento;
+        }
+        
+        public void setanoNascimento(int anoNascimento)
+        {
+            this.anoNascimento = anoNascimento;
+        }
+        
+        public String getEmail()
+        {
+            return email;
+        }
+        
+        public void setEmail(String email)
+        {
+            this.email = email;
+        }
+}
+---------------------------------------------------------------------------------------------------------
+
+package com.mycompany.aula5;
+
+public class Aluno extends Pessoa
+{
+    private String RGM;
+    public Aluno(String nome, int anoNascimento, String email, String RGM)
+    {
+        super(nome, anoNascimento, email);
+        this.RGM = RGM;
+    }
+
+    public String getRGM() 
+    {
+        return RGM;
+    }
+
+    public void setRGM(String RGM) 
+    {
+        this.RGM = RGM;
+    }
+    
+    
+}
+------------------------------------------------------------------------------------------------------------------
+
+package com.mycompany.aula5;
+
+public class Professor extends Pessoa
+{
+    private String matricula;
+    
+    
+    
+    public Professor(String nome, int anoNascimento, String email, String matricula)
+    {
+        super(nome, anoNascimento, email);
+        this.matricula = matricula;
+    }
+    
+    public String getMatricula()
+    {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula)
+    {
+        this.matricula = matricula;
+    }
+    
+    
+    
+}
